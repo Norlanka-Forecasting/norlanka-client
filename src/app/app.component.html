@@ -1,0 +1,6 @@
+<app-header *ngIf="!(_router.url === '/')" ></app-header>
+<app-sidebar *ngIf="!(_router.url === '/')" ></app-sidebar>
+<router-outlet *ngIf="(_router.url === '/')"></router-outlet>
+<main id="main" class="main" *ngIf="!(_router.url === '/')">
+  <router-outlet></router-outlet>
+</main>
