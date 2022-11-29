@@ -21,6 +21,7 @@
     "@ng-select/ng-select": "^9.0.2",
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
+    "chart.js": "^4.0.1",
     "crypto-js": "^4.1.1",
     "encrypt-rsa": "^2.1.2",
     "jsencrypt": "^2.3.1",
@@ -31,6 +32,7 @@
     "rxjs": "~7.5.0",
     "sass": "^1.55.0",
     "tslib": "^2.3.0",
+    "xlsx": "^0.18.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

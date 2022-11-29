@@ -15,6 +15,8 @@ import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {Store} from "./services/auth/store";
 import { ForecastComponent } from './components/forecast/forecast.component';
+import { PredictComponent } from './components/predict/predict.component';
+import {NgSelectModule} from "@ng-select/ng-select";
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ForecastComponent } from './components/forecast/forecast.component';
     DashboardComponent,
     PagesLoginComponent,
     ForecastComponent,
+    PredictComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { ForecastComponent } from './components/forecast/forecast.component';
     ToastNoAnimationModule.forRoot(),
     NgxPermissionsModule.forRoot(),
     FormsModule,
+    NgSelectModule,
   ],
   providers: [
     Store,
