@@ -8,7 +8,6 @@ import {Store} from "../../services/auth/store";
 import {AUTH} from "../../services/auth/constants";
 // @ts-ignore
 import * as forge from 'node-forge';
-import {RsaService} from "../../services/service/rsa.service";
 
 @Component({
   selector: 'app-pages-login',
@@ -24,7 +23,6 @@ export class PagesLoginComponent implements OnInit {
     private userService: UserService,
     private router: Router,
     private store: Store,
-    private rsaService: RsaService
   ) { }
 
   ngOnInit(): void {

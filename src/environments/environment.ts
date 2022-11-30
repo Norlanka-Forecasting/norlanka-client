@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:4000',
-  // baseUrl: 'http://localhost:9092',
-  baseUrl: 'https://localhost:8443',
+  // baseUrl: 'http://127.0.0.1:5000',
+  baseUrl: 'https://norlanka-pulse.herokuapp.com',
   role: 'manager',
 };
 

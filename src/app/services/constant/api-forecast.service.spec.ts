@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ApiFileService } from './api-file.service';
+import { ApiForecastService } from './api-forecast.service';
 
-describe('ApiFileService', () => {
-  let service: ApiFileService;
+describe('ApiForecastService', () => {
+  let service: ApiForecastService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ApiFileService);
+    service = TestBed.inject(ApiForecastService);
   });
 
   it('should be created', () => {

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RsaService } from './rsa.service';
+import { ApiPredictService } from './api-predict.service';
 
-describe('RsaService', () => {
-  let service: RsaService;
+describe('ApiPredictService', () => {
+  let service: ApiPredictService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RsaService);
+    service = TestBed.inject(ApiPredictService);
   });
 
   it('should be created', () => {

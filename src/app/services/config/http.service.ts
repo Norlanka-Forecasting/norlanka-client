@@ -22,10 +22,7 @@ export class HttpService {
   }
 
   httpGet(url: any) {
-    if(!!this.store.getData(AUTH.token)){
-      // @ts-ignore
-      httpOptions.headers.headers.set('Authorization',"Bearer " + this.store.getData(AUTH.token))
-    }
+    // httpOptions.headers = httpOptions.headers.append('Access-Control-Allow-Origin', '*');
     return this.http.get(url, httpOptions)
       .pipe(
         tap(res => {
@@ -38,10 +35,7 @@ export class HttpService {
   }
 
   httpPost(url: any, request: any) {
-    if(!!this.store.getData(AUTH.token)){
-      // @ts-ignore
-      httpOptions.headers.headers.set('Authorization',"Bearer " + this.store.getData(AUTH.token))
-    }
+
     return this.http.post(url, request, httpOptions).pipe(
       tap(res => {
         return res;
@@ -53,10 +47,7 @@ export class HttpService {
   }
 
   httpPut(url: any, request: any) {
-    if(!!this.store.getData(AUTH.token)){
-      // @ts-ignore
-      httpOptions.headers.headers.set('Authorization',"Bearer " + this.store.getData(AUTH.token))
-    }
+
     return this.http.put(url, request, httpOptions).pipe(
       tap(res => {
         return res;

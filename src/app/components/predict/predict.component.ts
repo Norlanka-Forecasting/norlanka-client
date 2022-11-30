@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Predict} from "../../models/predict";
+import {formatDate} from "@angular/common";
+import {PredictService} from "../../services/service/predict.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-predict',
@@ -9,13 +12,29 @@ import {Predict} from "../../models/predict";
 export class PredictComponent implements OnInit {
   packsList: any[] = [2,3,7];
   predict : Predict = new Predict();
+  predictSales: any = 0;
 
-  constructor() { }
+  constructor(
+    private predictService : PredictService,
+    private toaster : ToastrService
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(userForm: any) {
-
+    //This is required to create the message
+    this.predictService.predictSales(this.predict).subscribe(
+      (res: any) => {
+        this.predictSales = res;
+        this.toaster.success('Prediction has been done successfully.', 'Prediction Successful!',{
+          closeButton: true,
+        });
+      },(error: any) => {
+        this.toaster.error('Please try again latter.', 'Something went wrong!',{
+          closeButton: true,
+        });
+      }
+    )
   }
 }

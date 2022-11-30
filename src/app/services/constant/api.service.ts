@@ -8,7 +8,7 @@ export class ApiService {
 
   private readonly _flexApiGatewayUrl: any;
   constructor() {
-    this._flexApiGatewayUrl = environment.baseUrl + '/flex-service/api/v1';
+    this._flexApiGatewayUrl = environment.baseUrl;
   }
 
   get flexApiGatewayUrl(): any {
