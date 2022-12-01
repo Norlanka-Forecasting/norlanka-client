@@ -1,6 +1,6 @@
 export class Predict{
-  unitPrice: any = 0;
-  OTFI: any = 0;
+  unitPrice: any;
+  OTFI: any;
   pack: any = 2;
-  embelishmentCost: any = 0
+  embelishmentCost: any = 345
 }

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {Predict} from "../../models/predict";
 import {formatDate} from "@angular/common";
 import {PredictService} from "../../services/service/predict.service";
 import {ToastrService} from "ngx-toastr";
+import {ValidateInput} from "../../helper/helper";
 
 @Component({
   selector: 'app-predict',
@@ -16,7 +17,8 @@ export class PredictComponent implements OnInit {
 
   constructor(
     private predictService : PredictService,
-    private toaster : ToastrService
+    private toaster : ToastrService,
+    private el: ElementRef,
   ) { }
 
   ngOnInit(): void {
@@ -24,17 +26,19 @@ export class PredictComponent implements OnInit {
 
   onSubmit(userForm: any) {
     //This is required to create the message
-    this.predictService.predictSales(this.predict).subscribe(
-      (res: any) => {
-        this.predictSales = res;
-        this.toaster.success('Prediction has been done successfully.', 'Prediction Successful!',{
-          closeButton: true,
-        });
-      },(error: any) => {
-        this.toaster.error('Please try again latter.', 'Something went wrong!',{
-          closeButton: true,
-        });
-      }
-    )
+    if (ValidateInput(userForm, this.el, this.toaster)) {
+      this.predictService.predictSales(this.predict).subscribe(
+        (res: any) => {
+          this.predictSales = res;
+          this.toaster.success('Prediction has been done successfully.', 'Prediction Successful!', {
+            closeButton: true,
+          });
+        }, (error: any) => {
+          this.toaster.error('Please try again latter.', 'Something went wrong!', {
+            closeButton: true,
+          });
+        }
+      )
+    }
   }
 }
