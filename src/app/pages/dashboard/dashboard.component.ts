@@ -95,7 +95,7 @@ export class DashboardComponent implements OnInit {
         this.RenderSuiteQuantityChart('','','','doughnut','quantityDoughnut')
         this.RenderOTIFBarChart('','','','bar','otifBarChart')
       }
-      ,2000)
+      ,1000)
 
   }
 
