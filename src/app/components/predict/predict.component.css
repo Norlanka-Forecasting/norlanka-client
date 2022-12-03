@@ -1,12 +1,17 @@
 .predict .revenue-card .card-icon {
-  color: #2eca6a;
-  background: #e0f8e9;
+  color: #ffffff;
+  background-image: linear-gradient(to left, rgba(3, 88, 176, 0.44), #0358b0) !important;
 }
 
 .h6{
-  color: #2eca6a !important;
+  color: rgb(255, 255, 255) !important;
+  font-size: 18px;
+  font-weight: 400;
 }
 
+span{
+  color: rgb(255, 255, 255) !important;
+}
 .revenue-card {
   /*background: rgba(231, 37, 37, 0.15) !important;*/
 }
@@ -18,4 +23,8 @@
   height: 64px;
   flex-shrink: 0;
   flex-grow: 0;
+}
+
+.card.pink {
+  background-image: linear-gradient(to left, rgb(110, 162, 175), #2695b0) !important;
 }

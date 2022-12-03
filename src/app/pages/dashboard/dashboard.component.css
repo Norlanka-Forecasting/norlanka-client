@@ -8,3 +8,63 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif !important;
 }
+
+.predict .blue.revenue-card .card-icon {
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgba(32, 80, 114, 0.15), rgba(32, 80, 114, 0.25)) !important;
+}
+
+.predict .green.revenue-card .card-icon {
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgba(159, 129, 137, 0.56), #9F8189) !important;
+}
+
+.predict .revenue-card .card-icon.or1{
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgba(255, 220, 162, 0.54), #FFDCA2) !important;
+}
+
+.predict .revenue-card .card-icon.or2{
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgba(255, 220, 162, 0.54), #FFDCA2) !important;
+}
+
+span{
+  color: rgba(0, 0, 0, 0.51);
+}
+
+.h6{
+  color: rgb(255, 255, 255) !important;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.redColor {
+  color: rgba(231, 37, 37, 0.94) !important;
+  background: #e0f8e9 !important;
+}
+
+.revenue-card {
+  /*background: rgba(231, 37, 37, 0.15) !important;*/
+}
+
+.predict .card-icon {
+  font-size: 32px;
+  line-height: 0;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.card.blue {
+  background-image: linear-gradient(to left, #2193b0, #6dd5ed) !important;
+}
+
+.card.green {
+  background-image: linear-gradient(to left, #ffafbd, #ffc3a0) !important;
+}
+
+.card.orange {
+  background-image: linear-gradient(to left, #ff7e5f  , #feb47b) !important;
+}

@@ -11,9 +11,10 @@ import {ValidateInput} from "../../helper/helper";
   styleUrls: ['./predict.component.css']
 })
 export class PredictComponent implements OnInit {
-  packsList: any[] = [2,3,7];
+  packsList: any[] = [2,3,5,7];
   predict : Predict = new Predict();
   predictSales: any = 0;
+  otif: any = '';
 
   constructor(
     private predictService : PredictService,
@@ -27,6 +28,8 @@ export class PredictComponent implements OnInit {
   onSubmit(userForm: any) {
     //This is required to create the message
     if (ValidateInput(userForm, this.el, this.toaster)) {
+      this.predict.OTFI = this.otif/100;
+      debugger
       this.predictService.predictSales(this.predict).subscribe(
         (res: any) => {
           this.predictSales = res;
