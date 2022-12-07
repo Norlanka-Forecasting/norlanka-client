@@ -28,8 +28,7 @@ export class PredictComponent implements OnInit {
   onSubmit(userForm: any) {
     //This is required to create the message
     if (ValidateInput(userForm, this.el, this.toaster)) {
-      this.predict.OTFI = this.otif/100;
-      debugger
+      // this.predict.OTFI = this.otif/100;
       this.predictService.predictSales(this.predict).subscribe(
         (res: any) => {
           this.predictSales = res;

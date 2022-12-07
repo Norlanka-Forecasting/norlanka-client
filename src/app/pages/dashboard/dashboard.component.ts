@@ -229,7 +229,7 @@ export class DashboardComponent implements OnInit {
           'Bibs',
         ],
         datasets: [{
-          label: 'Employee Details',
+          label: 'Body Suites',
           data: [this.bodySuite, 0,0,0],
           backgroundColor: [
             'rgb(12,213,85)',

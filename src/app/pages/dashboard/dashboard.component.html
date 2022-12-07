@@ -1,10 +1,13 @@
 <div>
   <section class="section">
     <nav>
+      <div class="d-flex align-items-center justify-content-between mb-4">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a routerLink="/dashboard">Home</a></li>
         <li class="breadcrumb-item active">Dashboard</li>
       </ol>
+      <img src="assets/img/Primark_logo.png" width="100" alt="">
+      </div>
     </nav>
     <div class="row mb-4 predict">
       <div class="col-md-4">
@@ -14,7 +17,7 @@
             <div class="d-flex align-items-center">
               <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-currency-dollar"></i></div>
               <div class="ps-3">
-                <h6 class="h6">{{lastFinancialYearSales}}</h6>
+                <h6 class="h6">{{lastFinancialYearSales | number }}</h6>
               </div>
             </div>
           </div>
@@ -27,7 +30,7 @@
             <div class="d-flex align-items-center">
               <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-receipt"></i></div>
               <div class="ps-3">
-                <h6 class="h6">{{lastFinancialYearQuantity}} pcs</h6>
+                <h6 class="h6">{{lastFinancialYearQuantity | number}} pcs</h6>
               </div>
             </div>
           </div>

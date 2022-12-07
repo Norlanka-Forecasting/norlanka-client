@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
-  public date: any;
+  public date: any = '2023-01';
   public forecastValue: any = 0;
 
   constructor(
